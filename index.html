@@ -1,1 +1,27 @@
-<h1>"Hello world!"</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: https://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>PKM</title>
+    </head>
+  <body>
+      <div class="flex-container">
+        <h1>Hey!</h1>
+          <p id="demo"></p>
+
+          <script>
+          let text = '{"employees":[' +
+          '{"firstName":"John","lastName":"Doe" },' +
+          '{"firstName":"Anna","lastName":"Smith" },' +
+          '{"firstName":"Peter","lastName":"Jones" }]}';
+
+          const obj = JSON.parse(text);
+          document.getElementById("demo").innerHTML =
+          obj.employees[1].firstName + " " + obj.employees[1].lastName;
+          </script>
+
+      </div>
+    </body>
+</html>
